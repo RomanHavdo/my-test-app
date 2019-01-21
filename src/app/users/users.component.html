@@ -1,0 +1,39 @@
+<h1>Users</h1>
+<table border="1">
+  <tr>
+    <th>id</th>
+    <th>name</th>
+    <th>username</th>
+    <th>email</th>
+    <th>street</th>
+    <th>suite</th>
+    <th>city</th>
+    <th>zipcode</th>
+    <th>lat</th>
+    <th>lng</th>
+    <th>phone</th>
+    <th>website</th>
+    <th>company name</th>
+    <th>catchPhrase</th>
+    <th>bs</th>
+    <th>Posts</th>
+  </tr>
+  <tr *ngFor="let user of users;let idi=index">
+    <td>{{user.id}}</td>
+    <td>{{user.name}}</td>
+    <td>{{user.username}}</td>
+    <td>{{user.email}}</td>
+    <td>{{user.address.street}}</td>
+    <td>{{user.address.suite}}</td>
+    <td>{{user.address.city}}</td>
+    <td>{{user.address.zipcode}}</td>
+    <td>{{user.address.geo.lat}}</td>
+    <td>{{user.address.geo.lng}}</td>
+    <td>{{user.phone}}</td>
+    <td>{{user.website}}</td>
+    <td>{{user.company.name}}</td>
+    <td>{{user.company.catchPhrase}}</td>
+    <td>{{user.company.bs}}</td>
+    <td><button routerLink="/posts" [queryParams]="{userId : idi}">Posts</button></td>
+  </tr>
+</table>

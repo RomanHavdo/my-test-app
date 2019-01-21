@@ -1,0 +1,7 @@
+div:empty {
+    display: none;
+ }
+
+div{
+    border: 1px solid;
+}
